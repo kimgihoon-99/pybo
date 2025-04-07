@@ -11,7 +11,8 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
 
 import config
-
+db = SQLAlchemy()
+migrate = Migrate()
 
 naming_convention = {
     "ix": 'ix_%(column_0_label)s',
@@ -23,6 +24,7 @@ naming_convention = {
 
 db = SQLAlchemy(metadata=MetaData(naming_convention=naming_convention))
 migrate = Migrate()
+
 def page_not_found(e):
     return render_template('404.html'), 404
 
