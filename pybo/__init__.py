@@ -10,7 +10,7 @@ from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
 
-from config import config
+import config
 
 
 naming_convention = {
