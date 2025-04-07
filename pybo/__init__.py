@@ -11,8 +11,6 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
 
 import config
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
 
 naming_convention = {
     "ix": 'ix_%(column_0_label)s',
